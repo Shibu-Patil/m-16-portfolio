@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: "heading";
-    src: url("./Pacifico/Pacifico-Regular.ttf");
+    src: url("./asset/font/Pacifico/Pacifico-Regular.ttf");
 }
 :root{
     --back-color:#222b35;
@@ -17,7 +17,10 @@ body{
     width: 100vw;
     background-color: var(--back-color);
 }
-
+main{
+    height: 100%;
+    width: 100%;
+}
 /* nav styling starts here */
 
 nav{
@@ -77,6 +80,100 @@ nav{
     color: lime;
 }
 
+.right>div>i{
+    display: none;
+}
+
+
+/* herosection starts here */
+section{
+    height: calc(100vh - 80px);
+    /* background-color: red; */
+    display: flex;
+}
+/* left aside styling starts  here */
+.asideLeft{
+    width: 60%;
+    height: 100%;
+    background-color: aqua;
+}
+/* Right aside styling starts  here */
+.asideRight{
+    width: 40%;
+    height: 100%;
+    /* background-color: hotpink; */
+    padding: 100px 100px;
+}
+.asideRight>div{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    padding: 20px;
+}
+
+.asideRight>div>div{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    border-radius: 50%;
+    position: relative;
+    /* background-image: url("./asset/image/profile.enc");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat; */
+    /* padding: 20px; */
+    /* border-top: 5px solid lime;
+    border-bottom: 5px solid lime; */
+    /* animation: rotate 1s linear infinite; */
+    /* position: absolute; */
+
+
+    /* background-color:red; */
+
+    /* background-image: conic-gradient(lime,white,white,white,lime,white,white,white); */
+
+}
+
+.asideRight>div>div::before{
+position: absolute;
+left: 1%;
+top: 1%;
+content: "";
+height: 98%;
+width: 98%;
+border-radius: 50%;
+    background-image: url("./asset/image/profile.enc");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+.asideRight>div>div::after{
+    content: "";
+     height: 100%;
+     /* left: 0;
+    top: 0%; */
+    inset: 0;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    /* background-color:red; */
+    z-index: -1;
+    /* color: transparent; */
+    background-image: conic-gradient(lime,transparent,transparent,transparent,lime,transparent,transparent,transparent);
+     animation: rotate 1s linear infinite; 
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 /* resposive nav starts here */
 @media screen and (max-width:1160px) {
     .middle{
@@ -102,5 +199,21 @@ nav{
     }
 }
 @media screen and (max-width:587px) {
-    
+    .left{
+        width: 80%;
+        justify-content: start;
+        padding: 0px 20px;
+    }
+        .right{
+        width: 10%;
+        font-size: 20px;
+        /* background-color: red; */
+        padding: 0px 20px;
+    }
+        .right>div:not(.right>div:last-child){
+    display: none;
+}
+    .right>div>i{
+    display: block;
+}
 }
