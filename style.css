@@ -95,8 +95,47 @@ section{
 .asideLeft{
     width: 60%;
     height: 100%;
-    background-color: aqua;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
 }
+.asideLeft>div{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 100px 100px;
+    justify-content: center;
+}
+.asideLeft>div>div>h1{
+    font-size: 45px;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.asideLeft>div>div>h3{
+    font-size: 30px;
+    color: white;
+    font-weight: 900; 
+    letter-spacing: 1px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+}
+.asideLeft>div>div>h3>span{
+/* background-color: lime; */
+display: inline-block;
+padding-top: 10px;
+width: 50%;
+/* height: 100%; */
+}
+
+
 /* Right aside styling starts  here */
 .asideRight{
     width: 40%;
